@@ -13,6 +13,9 @@ logo: /assets/images/logo.svg
 
 logoAlt: 'FactorySense'
 
+starSenseLogo: /assets/images/starsense.svg
+starSenseLogoAlt: 'StarSense'
+
 # The static background image of the page
 bgImage: /assets/images/hero.jpg
 
