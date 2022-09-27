@@ -1,0 +1,106 @@
+---
+permalink: /
+layout: index
+---
+
+<!doctype html>
+<html>
+    <head>
+        <title>StarSense</title>
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
+        <style>
+            .menu-panel, .submit{
+                background-color: {{ page.bgMenu }} !important;
+            }
+
+            .hero .content, .menu-btn, .main-content, footer{
+                background-color: {{ page.mainColor }};
+            }
+
+            
+        </style>
+    </head>
+    <body class="home">
+        <div class="bg" style="background-image: url('{{ site.baseurl }}/{{ page.bgImage }}')"></div>
+        <div class="menu-panel">
+            <div class="logo">
+                <img src="{{ site.baseurl }}/{{ page.menuLogo }}" alt="{{ page.menuLogoAlt }}">
+            </div>
+            <button class="menu-btn">
+
+            </button>
+        </div>
+        <main class="home">
+            <section class="hero">
+                <div class="content">
+                    <img src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.logoAlt }}">
+                </div>
+            </section>
+            <section class="main-content d-flex justify-content-center mb">
+                <div class="container text-center">
+                    <img class="main-logo-small mb-big" src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.menuLogoAlt }}">
+                    <div class="big-text">
+                        {{ content }}
+                    </div>
+                </div>
+            </section>
+            <section class="main-content d-flex justify-content-center">
+                <div class="container-small text-center">
+                    <img class="main-logo-small mb-normal" src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.menuLogoAlt }}">
+                    <div class="big-title mb-big">
+                        <h1>{{ page.h1 }}</h1>
+                    </div>
+                    <div class="container-form text-left">
+                        <form method="post" action="">
+                            <div class="mb-form-input">
+                                <label>First Name</label>
+                                <input type="text" name="name" placeholder="Your First Name">
+                            </div>
+                            <div class="mb-form-input">
+                                <label>Last Name</label>
+                                <input type="text" name="name" placeholder="Your Last Name">
+                            </div>
+                            <div class="mb-form-input">
+                                <label>E-mail</label>
+                                <input type="email" name="name" placeholder="domain@email.com">
+                            </div>
+                            <div class="mb-form-input">
+                                <label>Phone Number</label>
+                                <input type="text" name="name" placeholder="+30 0000 000 000">
+                            </div>
+                            <h2>Please select all the ways you would like to hear from YachtSense:</h2>
+                            <div class="mb-form-input d-flex">
+                                <label class="checkbox d-flex align-items-center">
+                                    <input type="checkbox" name="email">
+                                    Email
+                                </label>
+                                <label class="checkbox d-flex align-items-center">
+                                    <input type="checkbox" name="Direct Mail">
+                                    Direct Mail
+                                </label>
+                                <label class="checkbox d-flex align-items-center">
+                                    <input type="checkbox" name="Direct Mail">
+                                    Direct Mail
+                                </label>
+                            </div>
+                            <div class="unsubscribe mb-big">
+                                You can unsubscribe at any time by clicking the link in the footer of our emails. For information about our privacy practices, please visit our website.
+                            </div>
+                            <input class="submit" type="submit" value="SUBMIT">
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul class="w-100 d-flex align-items-center justify-content-center">
+                    <li><a href="">Cookies Policy</a></li>
+                    <li><a href="">Legal Terms</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
+

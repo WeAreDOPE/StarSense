@@ -1,0 +1,316 @@
+/*...........................................
+                    FONTS
+...........................................*/
+@font-face {
+    font-family: 'kohinoor_banglalight';
+    src: url('../fonts/light/kohinoorbangla-light-webfont.eot');
+    src: url('../fonts/light/kohinoorbangla-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/light/kohinoorbangla-light-webfont.woff2') format('woff2'),
+         url('../fonts/light/kohinoorbangla-light-webfont.woff') format('woff'),
+         url('../fonts/light/kohinoorbangla-light-webfont.ttf') format('truetype'),
+         url('../fonts/light/kohinoorbangla-light-webfont.svg#kohinoor_banglalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kohinoor_banglabold';
+    src: url('../fonts/bold/kohinoorbangla-bold-webfont.eot');
+    src: url('../fonts/bold/kohinoorbangla-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bold/kohinoorbangla-bold-webfont.woff2') format('woff2'),
+         url('../fonts/bold/kohinoorbangla-bold-webfont.woff') format('woff'),
+         url('../fonts/bold/kohinoorbangla-bold-webfont.ttf') format('truetype'),
+         url('../fonts/bold/kohinoorbangla-bold-webfont.svg#kohinoor_banglabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*..........................................
+                GENERAL STYLE
+...........................................*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'kohinoor_banglalight';
+}
+
+main{
+    position: relative;
+    z-index: 2;
+    margin-left: 160px; 
+}
+
+label{
+    display: block;
+}
+
+button, input[type=submit]{
+    all: unset;
+    cursor: pointer;
+}
+
+p{
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
+}
+
+body{
+    &.home{
+
+        h1, h2, h3, h4, h5, h6, p{
+            color: #ffffff;
+        }
+    }
+}
+
+.big-text{
+    p{
+        font-size: 32px;
+        font-family: 'kohinoor_banglabold';
+    }
+}
+
+.big-title{
+    h1, h2, h3, h4, h5, h6{
+        font-size: 70px;
+        line-height: 1.2;
+        font-family: 'kohinoor_banglabold';
+    }
+}
+
+.container{
+    max-width: 1030px;
+    padding: 110px 36px;
+    margin: 0 auto;
+}
+
+.container-small{
+    max-width: 800px;
+    padding: 110px 36px;
+    margin: 0 auto;
+}
+
+.container-form{
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.w-100{
+    width: 100%
+}
+
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-logo-small{
+    width: 326px;
+}
+
+/*....................................
+                SPACING
+.....................................*/
+.mb{
+    margin-bottom: 220px;
+}
+
+.mb-big{
+    margin-bottom: 80px
+}
+
+.mb-normal{
+    margin-bottom: 50px;
+}
+
+.mb-form-input{
+    margin-bottom: 40px;
+}
+
+/*.......................................
+                ALIGNMENT
+........................................*/
+
+.d-flex{
+    display: flex;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-content-center{
+    justify-content: center
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+/*....................................
+                MENU
+.....................................*/
+.menu-panel{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 100%;
+    text-align: center;
+
+    .logo{
+        position: absolute;
+        top: 30px;
+    }
+
+    .menu-btn{
+        
+        position: absolute;
+        top: 50%;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+       
+    }
+}
+
+/*.....................................
+                HOMEPAGE
+......................................*/
+
+.hero{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    .content{
+        padding: 194px 99px;
+    }
+}
+
+
+/*.....................................
+            SUBSCRIBE FORM
+......................................*/
+form{
+    label{
+        color: #ffffff;
+        font-size: 20px;
+        font-family: 'kohinoor_banglabold';
+        margin-bottom: 10px;
+    }
+    
+    input[type=text], input[type=email]{
+        width: 100%;
+        height: 67px;
+        border-radius: 7px;
+        border: none;
+        padding: 20px;
+        font-size: 18px;
+        color: #27073A;
+    
+        &::placeholder{
+            font-size: 18px;
+            color: #27073A;
+            opacity: .6;
+        }
+    }
+
+    input[type=checkbox]{
+        width: 24px;
+        height: 24px;
+        background: #ffffff;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        position: relative;
+        margin-right: 15px;
+        cursor: pointer;
+        &:checked{
+            -webkit-appearance: auto;
+            -moz-appearance: auto;
+            appearance: auto;
+        }
+    }
+
+    h2{
+        color: #ffffff;
+        font-size: 20px;
+        font-family: 'kohinoor_banglabold';
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .checkbox{
+        font-size: 20px;
+        font-family: 'kohinoor_banglalight';
+        &:not(:last-child){
+            margin-right: 60px;
+        }
+    }
+
+    .unsubscribe{
+        color: #ffffff;
+    }
+
+    .submit{
+        text-align: center;
+        display: block;
+        color: #ffffff;
+        font-weight: 18px;
+        padding: 22px 60px;
+        font-family: 'kohinoor_banglabold';
+        margin: 0 auto;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 7px;
+    }
+}
+
+
+/*.....................................
+                FOOTER
+......................................*/
+footer{
+    position: relative;
+    z-index: 2;
+    padding: 36px;
+    margin-left: 160px;
+    border-top: 1px solid #ffffff6b;
+
+    ul{
+        list-style: none;
+
+        li{
+            a{
+                font-size: 14px;
+                color: #ffffff;
+                text-decoration: none;
+                margin: 0 15px;
+            }
+        }
+    }
+}
