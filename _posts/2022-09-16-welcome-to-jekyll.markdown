@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Industry Verticals:"
+subtitle:  "<strong>FactorySense</strong> is a <strong>StarSense</strong> brand. Discover the rest of our brands below"
 date:   2022-09-16 09:14:45 +0000
 categories: jekyll update
 ---

@@ -47,8 +47,15 @@
 $bigTitle: ( null: 28px, 480px: 28px, 576px: 28px, 768px: 30px, 992px: 35px, 1200px: 55px, 1400px: 70px);
 $bigText: ( null: 22px, 480px: 22px, 576px: 22px, 768px: 24px, 992px: 26px, 1200px: 28px, 1400px: 32px);
 $mediumText: ( null: 18px, 480px: 18px, 576px: 18px, 768px: 18px, 992px: 20px, 1200px: 20px, 1400px: 20px);
+$normalText: ( null: 16px, 480px: 16px, 576px: 16px, 768px: 16px, 992px: 20px, 1200px: 20px, 1400px: 20px);
 $smallText: ( null: 14px, 480px: 14px, 576px: 14px, 768px: 16px, 992px: 18px, 1200px: 20px, 1400px: 20px);
 
+$menuTitle: ( null: 30px, 480px: 30px, 576px: 30px, 768px: 30px, 992px: 40px, 1200px: 40px, 1400px: 40px);
+
+
+.normal-text{
+    @include font-size($normalText);
+}
 /*..........................................
                 GENERAL STYLE
 ...........................................*/
@@ -60,6 +67,18 @@ $smallText: ( null: 14px, 480px: 14px, 576px: 14px, 768px: 16px, 992px: 18px, 12
     font-family: 'kohinoor_banglalight';
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'kohinoor_banglabold';
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong{
+    font-family: 'kohinoor_banglabold';
+    font-weight: normal;
+    font-style: normal;
+}
+
 main{
     position: relative;
     z-index: 2;
@@ -69,6 +88,15 @@ main{
         margin-top: 95px;
         margin-left: 0;   
     }
+}
+
+.freeze{
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
 }
 
 label{
@@ -108,6 +136,12 @@ body{
         line-height: 1.2;
         font-family: 'kohinoor_banglabold';
     }
+}
+
+.container-full{
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .container{
@@ -178,6 +212,13 @@ body{
     margin-bottom: 40px;
 }
 
+.mb-menu{
+    margin-bottom: 100px;
+    @media only screen and (max-width: 991px) {
+        margin-bottom: 40px;
+    }
+}
+
 /*.......................................
                 ALIGNMENT
 ........................................*/
@@ -198,6 +239,10 @@ body{
     justify-content: center
 }
 
+.justify-content-between{
+    justify-content: space-between;
+}
+
 
 .text-center{
     text-align: center;
@@ -210,6 +255,110 @@ body{
 /*....................................
                 MENU
 .....................................*/
+.menu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    z-index: 4;
+    padding: 60px;
+    color: #ffffff;
+    overflow-y: auto;
+    transition: .3s ease-in-out;
+
+    &.open{
+        left: 0;
+    }
+
+
+    .close-btn.desktop{
+        position: absolute;
+        top: 50%;
+        right: -40px;
+        transform: translateY(-50%);
+
+        @media only screen and (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    .tiles-wrap{
+        margin: 0 -6px;
+        flex-wrap: wrap;
+    }
+
+    .tile{
+        width: 280px;
+        height: 280px;
+        margin: 3px;
+        background-color: #1B0529;
+        flex-shrink: 0;
+        img{
+            max-width: 100%;
+        }
+
+        @media only screen and (max-width: 991px) {
+            width: calc(50% - 6px);
+            height: 150px;
+            img{
+                padding: 20%;
+            }
+           
+        }
+    }
+
+    .menu-title{
+        font-family: 'kohinoor_banglabold';
+        @include font-size($menuTitle);
+        font-weight: normal;
+    }
+
+    .menu-action{
+        display: none;
+        margin-bottom: 20px;
+    }
+
+    @media only screen and (max-width: 991px) {
+        padding: 20px 36px;
+        .menu-action{
+            display: flex;
+
+            .close-btn{
+                display: flex;
+            }
+        }
+    }
+
+    .close-btn{
+        font-family: 'kohinoor_banglabold';
+
+        span:nth-child(2){
+            margin-left: 10px;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            &::before, &::after{
+                position: absolute;
+                margin-top: -2px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                transform-origin: center;
+            }
+
+            &::before{
+                transform: rotate(45deg);
+            }
+
+            &::after{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
 .menu-panel{
     display: flex;
     justify-content: center;
@@ -386,12 +535,6 @@ body{
                 width: 80%;
             }
         }
-        // @media only screen and (max-height: 850px) {
-        //     padding: 150px 0px;
-        //     .logo{
-        //         width: 70%;
-        //      }
-        // }
 
         @media only screen and (max-width: 991px) {
             max-width: 340px;
