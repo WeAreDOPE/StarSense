@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Privacy policy
+title: Privacy Policy
 permalink: /privacy-policy/
+order: 3
 ---
 # Privacy policy
 

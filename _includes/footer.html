@@ -1,9 +1,12 @@
 <footer>
     <nav>
         <ul class="w-100 d-flex align-items-center justify-content-center">
-            <li><a href="">Cookies Policy</a></li>
-            <li><a href="">Legal Terms</a></li>
-            <li><a href="">Privacy Policy</a></li>
+            {% assign sorted_pages = site.pages | sort: 'order' %}
+            {% for page in sorted_pages %}
+                {% if page.layout == 'page' %}
+                    <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+                {% endif %}
+            {% endfor %}
         </ul>
     </nav>
 </footer>
