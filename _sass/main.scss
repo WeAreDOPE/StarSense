@@ -25,6 +25,30 @@
     font-style: normal;
 }
 
+/*........................................
+            Responsive font sizes
+........................................*/
+@mixin font-size($fs-map) {
+
+    @each $fs-breakpoint,
+    $fs-font-size in $fs-map {
+        @if $fs-breakpoint==null {
+            font-size: $fs-font-size !important;
+        }
+
+        @else {
+            @media screen and (min-width: $fs-breakpoint) {
+                font-size: $fs-font-size !important;
+            }
+        }
+    }
+}
+
+$bigTitle: ( null: 28px, 480px: 28px, 576px: 28px, 768px: 30px, 992px: 35px, 1200px: 55px, 1400px: 70px);
+$bigText: ( null: 22px, 480px: 22px, 576px: 22px, 768px: 24px, 992px: 26px, 1200px: 28px, 1400px: 32px);
+$mediumText: ( null: 18px, 480px: 18px, 576px: 18px, 768px: 18px, 992px: 20px, 1200px: 20px, 1400px: 20px);
+$smallText: ( null: 14px, 480px: 14px, 576px: 14px, 768px: 16px, 992px: 18px, 1200px: 20px, 1400px: 20px);
+
 /*..........................................
                 GENERAL STYLE
 ...........................................*/
@@ -72,14 +96,14 @@ body{
 
 .big-text{
     p{
-        font-size: 32px;
+        @include font-size($bigText);
         font-family: 'kohinoor_banglabold';
     }
 }
 
 .big-title{
     h1, h2, h3, h4, h5, h6{
-        font-size: 70px;
+        @include font-size($bigTitle);
         line-height: 1.2;
         font-family: 'kohinoor_banglabold';
     }
@@ -375,7 +399,7 @@ body{
 form{
     label{
         color: #ffffff;
-        font-size: 20px;
+        @include font-size($mediumText);
         font-family: 'kohinoor_banglabold';
         margin-bottom: 10px;
     }
@@ -418,17 +442,22 @@ form{
 
     h2{
         color: #ffffff;
-        font-size: 20px;
+        @include font-size($mediumText);
         font-family: 'kohinoor_banglabold';
         font-weight: normal;
         margin-bottom: 20px;
     }
 
     .checkbox{
-        font-size: 20px;
+        @include font-size($smallText);
         font-family: 'kohinoor_banglalight';
+        margin-bottom: 0;
         &:not(:last-child){
             margin-right: 60px;
+
+            @media only screen and (max-width: 768px) {
+                margin-right: 30px;
+            }
         }
     }
 
