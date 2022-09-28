@@ -1,0 +1,27 @@
+---
+permalink: /privacy-policy/
+layout: page
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    {% include header.html %}
+    <div class="page">
+        <div id="all" class="d-flex flex-column">
+            <div id="content">
+                {% include menu.html %}
+                {% include menu-panel.html %}
+                <main>
+                    {% include breadcrumb.html %}
+                    <div class="container-xl">
+                        <div class="page-content">
+                            {{ content }}
+                        </div>
+                    </div>
+                </main>
+            </div>
+            {% include footer.html %}
+        </div>
+        <script src="{{ site.baseurl }}/assets/js/custom.js"></script>
+    </body>
+</html>

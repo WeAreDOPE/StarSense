@@ -3,128 +3,82 @@ permalink: /
 layout: index
 ---
 
-<!doctype html>
-<html>
-    <head>
-        <title>StarSense</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
-        {% include styles.html %}
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+    {% include header.html %}
     <body class="home">
-        <div id="menu" class="menu">
-            <div class="container-full">
-                <button class="close-btn desktop d-flex align-items-center">
-                    <span>CLOSE</span>
-                    <span class="d-flex align-items-center"></span>
-                </button>
-                <div class="mb-menu">
-                    <div class="menu-action d-flex align-items-center justify-content-between">
-                        <img src="{{ site.baseurl }}/{{ page.menuLogo }}" alt="{{ page.menuLogoAlt }}">
-                        <button class="close-btn d-flex align-items-center">
-                            <span>CLOSE</span>
-                            <span class="d-flex align-items-center"></span>
-                        </button>
-                    </div>
-                    <h2 class="menu-title">Industry Verticals:</h2>
-                    <span class="normal-text"><strong>FactorySense</strong> is a <strong>StarSense</strong> brand. Discover the rest of our brands below</span>
-                </div>
-                <div class="d-flex align-items-center tiles-wrap">
-                    {% assign sorted_pages = site.pages | sort: 'order' %}
-                    {% for page in sorted_pages %}
-                        {% if page.layout == 'landing' %}
-                            <a class="tile d-flex align-items-center justify-content-center" href="{{ page.url }}">
-                                <img src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.title }}"> 
-                            </a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+        <div id="all" class="d-flex flex-column">
+            <div id="content">
+                {% include menu.html %}
+                <div class="bg" style="background-image: url('{{ site.baseurl }}/{{ page.bgImage }}')"></div>
+                {% include menu-panel.html %}
+                <main class="home">
+                    <section class="hero d-flex align-items-center justify-content-center">
+                        <div class="content d-flex align-items-center justify-content-center">
+                            <img class="logo" src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.logoAlt }}">
+                            <img class="starsense" src="{{ site.baseurl }}/{{ site.starSenseLogo }}" alt="{{ site.starSenseLogoAlt }}">
+                        </div>
+                        <img class="scroll" src="{{ site.baseurl }}/assets/images/scroll.svg" alt="scroll">
+                    </section>
+                    <section class="main-content d-flex justify-content-center mb">
+                        <div class="container text-center">
+                            <img class="main-logo-small mb-big" src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.logoAlt }}">
+                            <div class="big-text">
+                                {{ content }}
+                            </div>
+                        </div>
+                    </section>
+                    <section class="main-content d-flex justify-content-center">
+                        <div class="container-small text-center">
+                            <img class="main-logo-small mb-normal" src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.LogoAlt }}">
+                            <div class="big-title mb-big">
+                                <h1>{{ page.h1 }}</h1>
+                            </div>
+                            <div class="container-form text-left">
+                                <form method="post" action="">
+                                    <div class="mb-form-input">
+                                        <label>First Name</label>
+                                        <input type="text" name="name" placeholder="Your First Name">
+                                    </div>
+                                    <div class="mb-form-input">
+                                        <label>Last Name</label>
+                                        <input type="text" name="name" placeholder="Your Last Name">
+                                    </div>
+                                    <div class="mb-form-input">
+                                        <label>E-mail</label>
+                                        <input type="email" name="name" placeholder="domain@email.com">
+                                    </div>
+                                    <div class="mb-form-input">
+                                        <label>Phone Number</label>
+                                        <input type="text" name="name" placeholder="+30 0000 000 000">
+                                    </div>
+                                    <h2>Please select all the ways you would like to hear from YachtSense:</h2>
+                                    <div class="mb-form-input d-flex">
+                                        <label class="checkbox d-flex align-items-center">
+                                            <input type="checkbox" name="email">
+                                            Email
+                                        </label>
+                                        <label class="checkbox d-flex align-items-center">
+                                            <input type="checkbox" name="Direct Mail">
+                                            Direct Mail
+                                        </label>
+                                        <label class="checkbox d-flex align-items-center">
+                                            <input type="checkbox" name="Direct Mail">
+                                            Direct Mail
+                                        </label>
+                                    </div>
+                                    <div class="unsubscribe mb-big">
+                                        You can unsubscribe at any time by clicking the link in the footer of our emails. For information about our privacy practices, please visit our website.
+                                    </div>
+                                    <input class="submit" type="submit" value="SUBMIT">
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </main>
             </div>
+            {% include footer.html %}
         </div>
-        <div class="bg" style="background-image: url('{{ site.baseurl }}/{{ page.bgImage }}')"></div>
-        <div class="menu-panel">
-            <div class="logo">
-                <img src="{{ site.baseurl }}/{{ page.menuLogo }}" alt="{{ page.menuLogoAlt }}">
-            </div>
-            <button class="menu-btn d-flex flex-column align-items-center justify-content-center">
-                <span></span>
-                <span>Menu</span>
-                <span></span>
-            </button>
-        </div>
-        <main class="home">
-            <section class="hero d-flex align-items-center justify-content-center">
-                <div class="content d-flex align-items-center justify-content-center">
-                    <img class="logo" src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.logoAlt }}">
-                    <img class="starsense" src="{{ site.baseurl }}/{{ page.starSenseLogo }}" alt="{{ page.starSenseLogoAlt }}">
-                </div>
-                <img class="scroll" src="{{ site.baseurl }}/assets/images/scroll.svg" alt="scroll">
-            </section>
-            <section class="main-content d-flex justify-content-center mb">
-                <div class="container text-center">
-                    <img class="main-logo-small mb-big" src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.menuLogoAlt }}">
-                    <div class="big-text">
-                        {{ content }}
-                    </div>
-                </div>
-            </section>
-            <section class="main-content d-flex justify-content-center">
-                <div class="container-small text-center">
-                    <img class="main-logo-small mb-normal" src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.menuLogoAlt }}">
-                    <div class="big-title mb-big">
-                        <h1>{{ page.h1 }}</h1>
-                    </div>
-                    <div class="container-form text-left">
-                        <form method="post" action="">
-                            <div class="mb-form-input">
-                                <label>First Name</label>
-                                <input type="text" name="name" placeholder="Your First Name">
-                            </div>
-                            <div class="mb-form-input">
-                                <label>Last Name</label>
-                                <input type="text" name="name" placeholder="Your Last Name">
-                            </div>
-                            <div class="mb-form-input">
-                                <label>E-mail</label>
-                                <input type="email" name="name" placeholder="domain@email.com">
-                            </div>
-                            <div class="mb-form-input">
-                                <label>Phone Number</label>
-                                <input type="text" name="name" placeholder="+30 0000 000 000">
-                            </div>
-                            <h2>Please select all the ways you would like to hear from YachtSense:</h2>
-                            <div class="mb-form-input d-flex">
-                                <label class="checkbox d-flex align-items-center">
-                                    <input type="checkbox" name="email">
-                                    Email
-                                </label>
-                                <label class="checkbox d-flex align-items-center">
-                                    <input type="checkbox" name="Direct Mail">
-                                    Direct Mail
-                                </label>
-                                <label class="checkbox d-flex align-items-center">
-                                    <input type="checkbox" name="Direct Mail">
-                                    Direct Mail
-                                </label>
-                            </div>
-                            <div class="unsubscribe mb-big">
-                                You can unsubscribe at any time by clicking the link in the footer of our emails. For information about our privacy practices, please visit our website.
-                            </div>
-                            <input class="submit" type="submit" value="SUBMIT">
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <nav>
-                <ul class="w-100 d-flex align-items-center justify-content-center">
-                    <li><a href="">Cookies Policy</a></li>
-                    <li><a href="">Legal Terms</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                </ul>
-            </nav>
-        </footer>
         <script src="{{ site.baseurl }}/assets/js/custom.js"></script>
     </body>
 </html>

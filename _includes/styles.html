@@ -1,15 +1,17 @@
 <style>
-    .menu-panel, .submit, .menu{
+    a{
+        color: {{ site.mainColor }};
+    }
+    .menu-panel, .submit, .menu, .banner{
         background-color: {{ site.secondaryColor }} !important;
     }
 
-    .hero .content, .menu-btn, .main-content, footer{
+    #breadcrumb, .hero .content, .menu-btn, .main-content, footer{
         background-color: {{ site.mainColor }};
     }
 
     .close-btn{
         color: {{ site.mainColor }};
-        
     }
 
     .close-btn span:nth-child(2)::before, .close-btn span:nth-child(2)::after{

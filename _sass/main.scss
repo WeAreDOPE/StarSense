@@ -44,6 +44,7 @@
     }
 }
 
+
 $bigTitle: ( null: 28px, 480px: 28px, 576px: 28px, 768px: 30px, 992px: 35px, 1200px: 55px, 1400px: 70px);
 $bigText: ( null: 22px, 480px: 22px, 576px: 22px, 768px: 24px, 992px: 26px, 1200px: 28px, 1400px: 32px);
 $mediumText: ( null: 18px, 480px: 18px, 576px: 18px, 768px: 18px, 992px: 20px, 1200px: 20px, 1400px: 20px);
@@ -52,6 +53,7 @@ $smallText: ( null: 14px, 480px: 14px, 576px: 14px, 768px: 16px, 992px: 18px, 12
 
 $menuTitle: ( null: 30px, 480px: 30px, 576px: 30px, 768px: 30px, 992px: 40px, 1200px: 40px, 1400px: 40px);
 
+$hs: ( null: 20px, 480px: 20px, 576px: 20px, 768px: 22px, 992px: 22px, 1200px: 24px, 1400px: 26px);
 
 .normal-text{
     @include font-size($normalText);
@@ -77,6 +79,14 @@ strong{
     font-family: 'kohinoor_banglabold';
     font-weight: normal;
     font-style: normal;
+}
+
+.bold{
+    font-family: 'kohinoor_banglabold';
+}
+
+#all{
+    min-height: 100vh;
 }
 
 main{
@@ -110,7 +120,7 @@ button, input[type=submit]{
 
 p{
     &:not(:last-child){
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 }
 
@@ -136,6 +146,17 @@ body{
         line-height: 1.2;
         font-family: 'kohinoor_banglabold';
     }
+}
+
+.container-xl{
+    max-width: 1760px;
+    margin: 0 auto;
+    padding: 40px 120px;
+
+    @media only screen and (max-width: 991px) {
+        padding: 40px 36px;
+    }
+
 }
 
 .container-full{
@@ -650,6 +671,7 @@ form{
                 FOOTER
 ......................................*/
 footer{
+    margin-top: auto;
     position: relative;
     z-index: 2;
     padding: 36px;
@@ -671,4 +693,48 @@ footer{
             }
         }
     }
+}
+
+/*.......................................
+                BREADCRUMB
+........................................*/
+#breadcrumb{
+    color: #ffffff;
+   
+    a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+/*.......................................
+                PAGES
+........................................*/
+.page-content{
+    max-width: 1364px;
+
+    h1, h2, h3, h4, h6{
+        margin-bottom: 20px;
+    }
+
+    h1{
+        @include font-size($bigText);
+    }
+
+    h2, h3, h4, h6{
+        @include font-size($hs);
+    }
+
+    p{
+        @include font-size($mediumText);
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+
+        &.banner{
+            padding: 40px 60px;
+            color: #ffffff;
+        }
+    }
+
 }

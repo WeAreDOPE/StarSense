@@ -1,0 +1,29 @@
+<div id="menu" class="menu">
+    <div class="container-full">
+        <button class="close-btn desktop d-flex align-items-center">
+            <span>CLOSE</span>
+            <span class="d-flex align-items-center"></span>
+        </button>
+        <div class="mb-menu">
+            <div class="menu-action d-flex align-items-center justify-content-between">
+                <img src="{{ site.baseurl }}/{{ site.menuLogo }}" alt="{{ site.menuLogoAlt }}">
+                <button class="close-btn d-flex align-items-center">
+                    <span>CLOSE</span>
+                    <span class="d-flex align-items-center"></span>
+                </button>
+            </div>
+            <h2 class="menu-title">Industry Verticals:</h2>
+            <span class="normal-text"><strong>FactorySense</strong> is a <strong>StarSense</strong> brand. Discover the rest of our brands below</span>
+        </div>
+        <div class="d-flex align-items-center tiles-wrap">
+            {% assign sorted_pages = site.pages | sort: 'order' %}
+            {% for page in sorted_pages %}
+                {% if page.layout == 'landing' %}
+                    <a class="tile d-flex align-items-center justify-content-center" href="{{ page.url }}">
+                        <img src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.title }}"> 
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

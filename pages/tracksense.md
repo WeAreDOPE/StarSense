@@ -1,7 +1,7 @@
 ---
 layout: landing
 title: 'truckSense'
-logo: /assets/images/menu-logos/trucksense.svg
+logo: assets/images/menu-logos/trucksense.svg
 url: '#'
 order: 9
 hoverColor: '#262626'
