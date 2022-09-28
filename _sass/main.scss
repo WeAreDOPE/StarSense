@@ -634,15 +634,28 @@ form{
         margin-bottom: 20px;
     }
 
-    .checkbox{
-        @include font-size($smallText);
-        font-family: 'kohinoor_banglalight';
-        margin-bottom: 0;
-        &:not(:last-child){
-            margin-right: 60px;
+    .checkboxes-wrapper{
+        
+        .checkbox{
+            @include font-size($smallText);
+            font-family: 'kohinoor_banglalight';
+            margin-bottom: 0;
+            &:not(:last-child){
+                margin-right: 60px;
 
-            @media only screen and (max-width: 768px) {
-                margin-right: 30px;
+                @media only screen and (max-width: 768px) {
+                    margin-right: 30px;
+                }
+            }
+        }
+        @media only screen and (max-width: 468px) {
+            flex-direction: column;
+
+            .checkbox{
+                &:not(:last-child){
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
             }
         }
     }
@@ -684,12 +697,31 @@ footer{
     ul{
         list-style: none;
 
+
         li{
             a{
+                display: block;
                 font-size: 14px;
                 color: #ffffff;
                 text-decoration: none;
                 margin: 0 15px;
+            }
+        }
+
+        @media only screen and (max-width: 468px) {
+            flex-direction: column;
+
+            li{
+                a{
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
+                &:not(:last-child){
+                    a{
+                        margin-bottom: 15px;
+                    }
+                }
             }
         }
     }
