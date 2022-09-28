@@ -29,6 +29,10 @@ url: "https://wearedope.github.io" # the base hostname & protocol for your site,
 twitter_username: jekyllrb
 github_username:  jekyll
 
+#Global variables change for every site you deploy
+mainColor: '#C94000'
+secondaryColor: '#27073A'
+
 # Build settings
 theme: minima
 plugins:

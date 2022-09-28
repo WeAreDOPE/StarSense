@@ -9,25 +9,7 @@ layout: index
         <title>StarSense</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
-        <style>
-            .menu-panel, .submit, .menu{
-                background-color: {{ page.bgMenu }} !important;
-            }
-
-            .hero .content, .menu-btn, .main-content, footer{
-                background-color: {{ page.mainColor }};
-            }
-
-            .close-btn{
-                color: {{ page.mainColor }};
-                
-            }
-
-            .close-btn span:nth-child(2)::before, .close-btn span:nth-child(2)::after{
-                background-color: {{ page.mainColor }};
-            }
-
-        </style>
+        {% include styles.html %}
     </head>
     <body class="home">
         <div id="menu" class="menu">

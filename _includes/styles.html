@@ -1,0 +1,30 @@
+<style>
+    .menu-panel, .submit, .menu{
+        background-color: {{ site.secondaryColor }} !important;
+    }
+
+    .hero .content, .menu-btn, .main-content, footer{
+        background-color: {{ site.mainColor }};
+    }
+
+    .close-btn{
+        color: {{ site.mainColor }};
+        
+    }
+
+    .close-btn span:nth-child(2)::before, .close-btn span:nth-child(2)::after{
+        background-color: {{ site.mainColor }};
+    }
+
+    {% assign sorted_pages = site.pages | sort: 'order' %}
+    {% assign counter = 1 %}
+    {% for page in sorted_pages %}
+        {% if page.layout == 'landing' %}
+            .tile:nth-child({{ counter }} ):hover{
+                background-color: {{ page.hoverColor }}
+                {% assign counter = counter | plus: 1 %}
+            }
+        {% endif %}
+    {% endfor %}
+
+</style>
