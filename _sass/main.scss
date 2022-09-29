@@ -775,6 +775,10 @@ footer{
         &.banner{
             padding: 40px 60px;
             color: #ffffff;
+
+            @media only screen and (max-width: 468px) {
+                padding: 20px 30px;
+            }
         }
     }
 }
