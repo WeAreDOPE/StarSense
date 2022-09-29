@@ -61,12 +61,12 @@ recapchaSiteKey: '6Lcr2z0iAAAAACJx0MmcIYRak70fVScFFMrC_-37'
 # Build settings
 theme: minima
 plugins:
-  - jekyll-feed
+  - jekyll-autoprefixer
 
 sass:
   load_paths:
     - _sass
-    - /home/ubuntu/gems/gems/bootstrap-5.2.0
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
