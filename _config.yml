@@ -68,7 +68,7 @@ recapchaSiteKey: '6Lcr2z0iAAAAACJx0MmcIYRak70fVScFFMrC_-37'
 # Build settings
 theme: minima
 plugins:
-  - jekyll-autoprefixer
+  - octopress-autoprefixer
 
 autoprefixer:
   browsers: 
@@ -78,6 +78,7 @@ autoprefixer:
 sass:
   load_paths:
     - _sass
+
 
 
 # Exclude from processing.

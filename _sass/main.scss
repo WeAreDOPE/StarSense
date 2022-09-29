@@ -258,22 +258,33 @@ body{
 ........................................*/
 
 .d-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .flex-column{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .align-items-center{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .justify-content-center{
-    justify-content: center
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .justify-content-between{
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -299,6 +310,8 @@ body{
     padding: 60px;
     color: #ffffff;
     overflow-y: auto;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 
     &.open{
@@ -310,6 +323,8 @@ body{
         position: absolute;
         top: 50%;
         right: -40px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
 
         @media only screen and (max-width: 991px) {
@@ -356,9 +371,12 @@ body{
     @media only screen and (max-width: 991px) {
         padding: 20px 36px;
         .menu-action{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-
             .close-btn{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
             }
         }
@@ -379,14 +397,20 @@ body{
                 display: block;
                 width: 100%;
                 height: 2px;
+                -webkit-transform-origin: center;
+                -ms-transform-origin: center;
                 transform-origin: center;
             }
 
             &::before{
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
             }
 
             &::after{
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
                 transform: rotate(-45deg);
             }
         }
@@ -394,7 +418,11 @@ body{
 }
 
 .menu-panel{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: fixed;
     z-index: 3;
@@ -416,18 +444,24 @@ body{
         width: 96px;
         height: 96px;
         border-radius: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
 
         span{
             color: #000000;
             font-family: 'kohinoor_banglabold';
             font-size: 18px;
+            -webkit-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;
 
             &:nth-child(1){
                 width: 25px;
                 height: 3px;
                 background-color: #000000;
+                -webkit-transition: all .3s ease-in-out;
+                -o-transition: all .3s ease-in-out;
                 transition: all .3s ease-in-out;
             }
 
@@ -442,6 +476,8 @@ body{
                 width: 25px;
                 height: 3px;
                 background-color: #000000;
+                -webkit-transition: all .3s ease-in-out;
+                -o-transition: all .3s ease-in-out;
                 transition: all .3s ease-in-out;
             }
         }
@@ -475,6 +511,8 @@ body{
             position: absolute;
             left: 36px;
             top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
             transform: translateY(-50%);
         }
 
@@ -485,6 +523,8 @@ body{
             width: 70px;
             height: 70px;
             border-radius: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
             transform: translateY(-50%);
 
             span{
@@ -662,6 +702,9 @@ form{
             }
         }
         @media only screen and (max-width: 468px) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
 
             .checkbox{
