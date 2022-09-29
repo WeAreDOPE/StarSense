@@ -43,7 +43,7 @@ The index page has a different layout from all other pages **Index** **don't cha
 - title: Leave it to home. It is used in the head -> title attr.
 - description: It is used in the meta-description tag and og:image description. Change it with your own.
 - h1: The heading above the form
-- bgImage: You must change this in every landing page you deploy. **Make sure to use 1920 x 1080 images with sufficient compression (not more than 400kb) for overall pageSpeed**
+- bgImage: You must change this in every landing page you deploy. **Make sure to use 1920 x 1080 or higher images with sufficient compression (not more than 400kb) for overall pageSpeed**
 
 ## Dynamic styles
 All the dynamic styles are in the file **_includes/styles.html** and are imported in the header.html in the same dir. The header is included in every page. At the _include folder you can find the menu-bar.html, the menu.html, the footer.html and the breadcrumb.html. If you want to change css rules all the css are in the **_sass** folder in the **main.scss**
