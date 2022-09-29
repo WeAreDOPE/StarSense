@@ -5,10 +5,10 @@
 layout: index
 
 # The title of the page
-title:  'FactorySense'
+title:  'Home'
 
 # meta description and og:image description
-description: 'Generic pagew description'
+description: 'Generic page description'
 
 # The tite above the contact form
 h1: 'Subscribe to be kept in the loop:'

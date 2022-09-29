@@ -1,7 +1,18 @@
 ---
+# Every page with page layout will display as link in the footer
+# change it to hiiden to hide it or delete it
 layout: page
+
+# The title of the page
 title: Cookie Policy
+
+# meta description and og:image description
+description: 'Generic page description'
+
+#The permalink of the page
 permalink: /cookie-policy/
+
+# The order of the page for the footer menu
 order: 1
 ---
 # Cookie Policy

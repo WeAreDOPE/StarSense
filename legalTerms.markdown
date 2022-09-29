@@ -1,7 +1,18 @@
 ---
+# Every page with page layout will display as link in the footer
+# change it to hiiden to hide it or delete it
 layout: page
+
+# The title of the page
 title: Legal Terms
+
+# meta description and og:image description
+description: 'Generic page description'
+
+#The permalink of the page
 permalink: /legal-terms/
+
+# The order of the page for the footer menu
 order: 2
 ---
 # Legal Terms
