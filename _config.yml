@@ -64,7 +64,6 @@ plugins:
   - jekyll-autoprefixer
 
 autoprefixer:
-  grid: autoplace
   browsers: 
     - last 10 versions
     - Edge >= 14

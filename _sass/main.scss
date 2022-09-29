@@ -69,6 +69,10 @@ $hs: ( null: 20px, 480px: 20px, 576px: 20px, 768px: 22px, 992px: 22px, 1200px: 2
     font-family: 'kohinoor_banglalight';
 }
 
+html, body{
+    height: 100%;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: 'kohinoor_banglabold';
     font-weight: normal;
@@ -807,6 +811,36 @@ footer{
     }
 
     .btn-404{
+        color: #ffffff;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        font-family: 'kohinoor_banglabold';
+        max-width: 420px;
+        width: 100%;
+        padding: 20px 40px;
+        border-radius: 7px;
+        box-sizing: border-box;
+    }
+}
+
+.page-thankyou{
+    color: #ffffff;
+    .wrapper-thankyou{
+        min-height: 540px;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    h1{
+        max-width: 549px;
+        @include font-size($bigTitle);
+        line-height: 1.2;
+    }
+
+    .btn-thankyou{
         color: #ffffff;
         text-decoration: none;
         display: inline-block;
