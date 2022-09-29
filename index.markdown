@@ -3,8 +3,14 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: index
+
+# The title of the page
 title:  'FactorySense'
 
+# meta description and og:image description
+description: 'Generic pagew description'
+
+# The tite above the contact form
 h1: 'Subscribe to be kept in the loop:'
 
 # The static background image of the page

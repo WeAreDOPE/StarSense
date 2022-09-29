@@ -30,17 +30,27 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 #Global variables change for every site you deploy
+# The main logo of the page
 logo: assets/images/logo.svg
 logoAlt: 'FactorySense'
 
+#The starsense logo
 starSenseLogo: assets/images/starsense.svg
 starSenseLogoAlt: 'StarSense'
 
+# The main page logo (menu version)
 menuLogo: assets/images/menu_logo.svg
 menuLogoAlt: 'FactorySense'
 
+# The main page color (content)
 mainColor: '#C94000'
+
+# Secondary color (menu backghround etc)
 secondaryColor: '#27073A'
+
+# The og:image of the page
+ogImage: assets/images/og-images/factorysense.png
+ogImageAlt: 'FactorySense'
 
 # Build settings
 theme: minima
