@@ -29,7 +29,7 @@ url: "https://starsense.dope.studio" # the base hostname & protocol for your sit
 twitter_username: jekyllrb
 github_username:  jekyll
 
-#Global variables change for every site you deploy
+#...................Global variables change for every site you deploy.............................
 # The main logo of the page
 logo: assets/images/logo.svg
 logoAlt: 'FactorySense'
@@ -51,6 +51,9 @@ secondaryColor: '#27073A'
 # The og:image of the page
 ogImage: assets/images/og-images/factorysense.png
 ogImageAlt: 'FactorySense'
+
+# The form action url
+formAction: 'https://forms.un-static.com/forms/54ad90086172f49ae86376f5ee4e6128f6c0ff2d'
 
 # Build settings
 theme: minima

@@ -35,22 +35,22 @@ layout: index
                                 <h1>{{ page.h1 }}</h1>
                             </div>
                             <div class="container-form text-left">
-                                <form method="post" action="">
+                                <form method="post" action="{{ site.formAction }}">
                                     <div class="mb-form-input">
                                         <label>First Name</label>
-                                        <input type="text" name="name" placeholder="Your First Name">
+                                        <input type="text" name="first_name" placeholder="Your First Name" required>
                                     </div>
                                     <div class="mb-form-input">
                                         <label>Last Name</label>
-                                        <input type="text" name="name" placeholder="Your Last Name">
+                                        <input type="text" name="last_name" placeholder="Your Last Name" required>
                                     </div>
                                     <div class="mb-form-input">
                                         <label>E-mail</label>
-                                        <input type="email" name="name" placeholder="domain@email.com">
+                                        <input type="email" name="mail" placeholder="domain@email.com" required>
                                     </div>
                                     <div class="mb-form-input">
                                         <label>Phone Number</label>
-                                        <input type="text" name="name" placeholder="+30 0000 000 000">
+                                        <input type="tel" name="phone" placeholder="+30 0000 000 000">
                                     </div>
                                     <h2>Please select all the ways you would like to hear from YachtSense:</h2>
                                     <div class="mb-form-input d-flex checkboxes-wrapper">
@@ -63,7 +63,7 @@ layout: index
                                             Direct Mail
                                         </label>
                                         <label class="checkbox d-flex align-items-center">
-                                            <input type="checkbox" name="Direct Mail">
+                                            <input type="checkbox" name="Direct Mail2">
                                             Direct Mail
                                         </label>
                                     </div>
