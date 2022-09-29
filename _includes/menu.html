@@ -21,7 +21,7 @@
             {% assign sorted_pages = site.pages | sort: 'order' %}
             {% for page in sorted_pages %}
                 {% if page.layout == 'landing' %}
-                    <a class="tile d-flex align-items-center justify-content-center" href="{{ page.url }}">
+                    <a class="tile d-flex align-items-center justify-content-center" href="{{ page.targetUrl }}">
                         <img loading="lazy" src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.title }}"> 
                     </a>
                 {% endif %}
