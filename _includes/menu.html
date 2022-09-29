@@ -7,7 +7,7 @@
         <div class="mb-menu">
             <div class="menu-action d-flex align-items-center justify-content-between">
                 <a href="{{ site.url }}">
-                    <img src="{{ site.baseurl }}/{{ site.menuLogo }}" alt="{{ site.menuLogoAlt }}">
+                    <img loading="lazy" src="{{ site.baseurl }}/{{ site.menuLogo }}" alt="{{ site.menuLogoAlt }}">
                 </a>
                 <button class="close-btn d-flex align-items-center">
                     <span>CLOSE</span>
@@ -22,7 +22,7 @@
             {% for page in sorted_pages %}
                 {% if page.layout == 'landing' %}
                     <a class="tile d-flex align-items-center justify-content-center" href="{{ page.url }}">
-                        <img src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.title }}"> 
+                        <img loading="lazy" src="{{ site.baseurl }}/{{ page.logo }}" alt="{{ page.title }}"> 
                     </a>
                 {% endif %}
             {% endfor %}
