@@ -3,12 +3,12 @@
 ## Global variables
 
 In the **_config.yml** there are some variables that you shoud change for every landing page you deploy. Jekyll has some global variables here but you can leave them as is.
-- **title:** The site title. It is used to generate the head -> title attr **eg: FactorySense - Home**
+- **title:** The site title. It is used to generate the meta title attribute for inner pages **eg: Privacy Policy | Factory Sense**. It is also used on breadcrumbs.
 - **baseurl:** Leave it blank unless you plan to host the page from a subdir **ex: yourdomain.com/subdir**.
-- **url:** Your domain **https://yourdomain.com**.
-- **logo:** The main logo of the page.
+- **url:** Your domain **e.g. https://factory-sense.io**.
+- **logo:** The main logo appearing on the center of the page.
 - **logoAlt:** The alt text attribute you want the logo image to have.
-- **starSenseLogo:** Your brand logo (It should be the same on all of your landing pages).
+- **starSenseLogo:** Your StarSense logo appearing bellow the main logo (It should be the same on all of your landing pages).
 - **starSenseLogoAlt:** The alt text attribute you want your brand logo image to have.
 - **menuLogo:** The logo for the menu (Menu bar, top mobile bar, opened menu).
 - **menuLogoAlt:** The alt attribute for the menu logo.
