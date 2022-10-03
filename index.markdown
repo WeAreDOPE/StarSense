@@ -5,10 +5,10 @@
 layout: index
 
 # The title of the page
-title:  'Factory Sence | Makers intelligence'
+title:  'Factory Sence | Makers' intelligence'
 
 # meta description and og:image description
-description: 'IoT helps manufacturers minimize downtime by providing real-time visibility over the status of every machine in the factory.'
+description: 'Meta description for SEO purposes. IoT helps manufacturers minimize downtime by providing real-time visibility over the status of every machine in the factory.'
 
 # The tite above the contact form
 h1: 'Subscribe to be kept in the loop:'
@@ -18,4 +18,4 @@ bgImage: assets/images/hero.jpg
 
 ---
 
-IoT helps manufacturers minimize downtime by providing real-time visibility over the status of every machine in the factory. But that's not all. Once the machines are connected to a single management platform, machine failure parameters can be continuously measured and analyzed.
+Here goes the intro text explaining what this landing page is about. E.g. IoT helps manufacturers minimize downtime by providing real-time visibility over the status of every machine in the factory. But that's not all. Once the machines are connected to a single management platform, machine failure parameters can be continuously measured and analyzed.
