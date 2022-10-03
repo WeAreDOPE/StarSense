@@ -28,8 +28,12 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 #...................Global variables change for every site you deploy.............................
+# The site name - used in breadcrumbs
+title: 'Factory Sense'
+
+
 # The site title (It is used in the head title attr)
-title: 'FactorySense'
+title: 'Factory Sense | Makers\' inteligence'
 
 # the subpath of your site, e.g. /blog
 baseurl: "" 
