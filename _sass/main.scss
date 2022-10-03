@@ -226,7 +226,8 @@ body{
 }
 
 .main-logo-small{
-    width: 326px;
+    width: 100%;
+    max-width: 326px;
 }
 
 /*....................................
@@ -588,42 +589,69 @@ body{
     min-height: 955px;
 
     @media only screen and (max-width: 1400px) {
-        min-height: 643px;
+        min-height: 550px;
     }
 
     @media only screen and (max-width: 991px) {
         height: calc(100vh - 95px);
-        min-height: 700px;
+        min-height: 450px;
     }
 
     .content{
         position: relative;
-        padding: 194px 99px;
+        width: 80%;
+        max-width: 650px;
+
+        &::before{
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        .square{
+            position:  absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            color: white;
+            text-align: center;
+        }
 
         .logo{
-            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding-left: 100px;
+            padding-right: 100px;
+            
+            max-width: 100%;
         }
 
         @media only screen and (max-width: 1400px) {
-            padding: 100px 50px;
-
+            max-width: 450px;
             .logo{
-                width: 80%;
+                padding-left: 60px;
+                padding-right: 60px;
             }
         }
 
         @media only screen and (max-width: 991px) {
             max-width: 340px;
-            padding: 30px 40px 270px 40px;
 
             .logo{
-                width: 100%;
+                margin-top: -20px;
+                padding-left: 40px;
+                padding-right: 40px;
             }
         }
 
         .starsense{
             position: absolute;
             bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 
