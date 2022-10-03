@@ -5,7 +5,7 @@
 layout: index
 
 # The title of the page
-title:  'Factory Sence | Makers\' intelligence'
+title:  'Factory Sence | Makers intelligence'
 
 # meta description and og:image description
 description: 'Meta description for SEO purposes. IoT helps manufacturers minimize downtime by providing real-time visibility over the status of every machine in the factory.'
