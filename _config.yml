@@ -39,7 +39,7 @@ url: "https://starsense.dope.studio"
 
 # The main logo of the page
 logo: assets/images/logo.svg
-logoAlt: 'FactorySense'
+logoAlt: 'Factory Sense'
 
 #The starsense logo
 starSenseLogo: assets/images/starsense.svg
@@ -47,7 +47,7 @@ starSenseLogoAlt: 'StarSense'
 
 # The main page logo (menu version)
 menuLogo: assets/images/menu_logo.svg
-menuLogoAlt: 'FactorySense'
+menuLogoAlt: 'Factory Sense'
 
 # The main page color (content)
 mainColor: '#C94000'
@@ -57,9 +57,9 @@ secondaryColor: '#27073A'
 
 # The og:image of the page
 ogImage: assets/images/og-images/factorysense.png
-ogImageAlt: 'FactorySense'
+ogImageAlt: 'Factory Sense'
 
-# The form action url
+# The contact form action url
 formAction: 'https://forms.un-static.com/forms/54ad90086172f49ae86376f5ee4e6128f6c0ff2d'
 
 # The google recapcha site key

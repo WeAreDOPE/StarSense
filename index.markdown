@@ -5,10 +5,10 @@
 layout: index
 
 # The title of the page
-title:  'Home'
+title:  'Factory Sence | Makers intelligence'
 
 # meta description and og:image description
-description: 'Generic page description'
+description: 'IoT helps manufacturers minimize downtime by providing real-time visibility over the status of every machine in the factory.'
 
 # The tite above the contact form
 h1: 'Subscribe to be kept in the loop:'
@@ -18,4 +18,4 @@ bgImage: assets/images/hero.jpg
 
 ---
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+IoT helps manufacturers minimize downtime by providing real-time visibility over the status of every machine in the factory. But that's not all. Once the machines are connected to a single management platform, machine failure parameters can be continuously measured and analyzed.
