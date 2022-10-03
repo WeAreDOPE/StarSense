@@ -1,5 +1,9 @@
 <head>
-    <title>{{page.title}}</title>
+    {% if page.url == '/' %}
+        <title>{{page.title}}</title>
+    {% else %}
+        <title>{{page.title}} | {{site.title}}</title>
+    {% endif %}
 
     <meta name="description" content="{{ page.description }}">
 
