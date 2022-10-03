@@ -31,10 +31,6 @@ github_username:  jekyll
 # The site name - used in breadcrumbs
 title: 'Factory Sense'
 
-
-# The site title (It is used in the head title attr)
-title: 'Factory Sense | Makers\' inteligence'
-
 # the subpath of your site, e.g. /blog
 baseurl: "" 
 
