@@ -122,6 +122,8 @@ label{
     display: block;
 }
 
+
+
 button, input[type=submit]{
     all: unset;
     cursor: pointer;
@@ -732,6 +734,7 @@ form{
         max-width: 400px;
         border-radius: 7px;
         box-sizing: border-box;
+        transition: .3s ease-in-out;
     }
 }
 
