@@ -18,6 +18,7 @@ In the **_config.yml** there are some variables that you shoud change for every 
 - **ogImageAlt:** The alt attr of the og image
 - **formAction:** The target url of the form (Replace it with your own from un-statick, mailchimp etc)
 - **recapchaSiteKey:** The site key for the reCaptcha. **You must create one at https://www.google.com/u/1/recaptcha/admin/create and replace it** If you use unstatic you place the **secret key of the reCaptcha there**
+- **googleAnalyticsId:** The property id (gtag) of the page you want to track. You can leave it blank for every page you dont want to track
 
 ## Menu items
 
@@ -47,3 +48,6 @@ The index page has a different layout from all other pages **Index** **don't cha
 
 ## Dynamic styles
 All the dynamic styles are generated in the file **_includes/styles.html** which is imported in the header.html in the same dir. The header is included in every page. **styles.html** uses variables to define global site colors according to the site's branding. These variables may be changed in **_config.yml**. At the _includes folder you can also find the menu-bar.html, the menu.html, the footer.html and the breadcrumb.html. If you want to change css rules all the css are in the **_sass** folder in the **main.scss**
+
+## Other pages
+If you want to make a paragraph appear like a banner with paddings and background color, in the markdown file of the page prepend the class {:.banner} (before the paragraph)

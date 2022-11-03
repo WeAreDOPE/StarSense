@@ -65,6 +65,9 @@ formAction: 'https://forms.un-static.com/forms/54ad90086172f49ae86376f5ee4e6128f
 # The google recapcha site key
 recapchaSiteKey: '6Lcr2z0iAAAAACJx0MmcIYRak70fVScFFMrC_-37'
 
+#Enter your google Analytics (gtag) property id. Leave it blank if you dont want to implement it.
+googleAnalyticsId: ''
+
 # Build settings
 theme: minima
 plugins:
